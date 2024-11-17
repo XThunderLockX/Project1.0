@@ -1,0 +1,563 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Spartan',sans-serif;
+}
+
+h1 {
+    font-size: 50px;
+    line-height: 64px;
+    color: rgb(209, 37, 37);
+}
+
+h2{
+    font-size: 46px;
+    line-height: 54px;
+    color: rgb(255, 217, 0);
+}
+h4{
+    font-size: 20px;
+    color: rgba(244, 255, 38, 0.748);
+}
+h6{
+    font-weight: 2000;
+    font-size: 12px;
+    color: red;
+}
+p{
+    font-size: 16px;
+    color: rgb(0, 30, 255);
+    margin: 15px 0 20px 0;
+}
+
+.section-p1{
+    padding: 40px 80px;
+}
+
+.section-m1{
+    margin: 40px 0;
+}
+
+button.normal{
+    font-size: 14px;
+    font-weight: 600;
+    padding: 15px 30px;
+    color: rgb(0, 0, 0);
+    background-color: rgba(124, 18, 186, 0.677);
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.35s;
+}
+button.white{
+    font-size: 13px;
+    font-weight: 600;
+    padding: 11px 18px;
+    color: rgb(0, 0, 0);
+    background-color:transparent;
+    cursor: pointer;
+    border: 1px solid crimson;
+    outline: none;
+    transition: 0.25s;
+}
+
+body{
+    
+    width: 100%;
+    background-color: black;
+}
+
+/* Header Start */
+#header{
+
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 20px 80px;
+background-color:rgb(0, 234, 255) ;
+box-shadow: 0 5px 30px rgb(59, 45, 255);
+z-index: 999;
+position: sticky;
+top: 0;
+left: 0;
+}
+
+
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navbar li{
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+}
+#navbar li a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: black;
+    transition: 0.4s ease;
+}
+#navbar li a:hover,
+#navbar li a.active{
+    color: rgb(255, 255, 0);
+}
+
+#navbar li a.active::after,#navbar li a:hover::after{
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: rgb(255, 238, 0);
+    position:absolute;
+    bottom: -4px;
+    left: 20px;
+}
+
+
+.logo {
+    /* Adjust these properties as needed for your logo */
+    width: 150px;
+    height: 150px;  /* Adjust height based on image aspect ratio or use "max-height" */
+    position: absolute;  /* Make the logo positioned absolutely */
+    top: 0;  /* Position the logo at the top of its container */
+    left: 20px;  /* Position the logo at the left of its container */
+  }
+  
+
+
+/*Home Page*/
+#hero {
+    background-image: url(Images/Start.gif);
+    background-size: cover;
+    position: relative;
+    height: 90vh;
+    width: 100%; /* Set width to take up full width of the viewport */
+}
+
+.background-image {
+    position: absolute;
+    top: 3%; /* Move the image down by 10% */
+    right: 10%;
+    bottom: 0;
+    width: 30%; /* Set the width of the background image column */
+    background-image: url("Images/ez.png");
+    background-size: cover;
+    background-position: top right; /* Set background position to top right */
+}
+
+.content {
+    position: absolute;
+    top: 30%; /* Move the text content down by 30% */
+    left: 5%;
+    width: 75%; /* Set the width of the content column */
+    padding: 0 20px; /* Adjust padding as needed */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: #fff; /* Example text color */
+}
+.content h4{
+    padding-bottom: 15px;
+}
+.content h1{
+    color: rgb(12, 20, 255);
+}
+.content button
+{
+    background-image: url("Images/button.png");
+    background-color: transparent;
+    color: rgb(242, 255, 0);
+    border: 0;
+    padding: 14px 80px 14px 65px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 15px;
+}
+#feature{
+    background-color: #050505;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+#feature .fe-box{
+    width: 180px;
+    text-align: center;
+    padding: 25px 15px;
+    box-shadow: 20px 20px 34px rgb(0, 0, 0);
+    border: 1px solid whitesmoke;
+    border-radius: 4px;
+    margin: 15px 0;
+    transition: 0.3s ease;
+}
+#feature .fe-box:hover{
+    box-shadow: 20px 20px 34px #ff9500ca;
+   
+}
+#feature .fe-box h6{
+    display: inline-block;
+    padding: 9px 8px 6px 8px;
+    line-height: 1;
+    border-radius: 4px;
+    color: rgb(255, 162, 0);
+    background-color: #333435df;
+}
+#feature .fe-box img{
+    width: 100%;
+    margin-bottom: 10px ;
+}
+#feature .fe-box:nth-child(2) h6
+{
+    background-color: rgba(255, 234, 0, 0.363);
+}
+#feature .fe-box:nth-child(3) h6
+{
+    background-color: rgba(89, 255, 0, 0.395);
+}
+#feature .fe-box:nth-child(4) h6
+{
+    background-color: rgba(0, 89, 255, 0.33);
+}
+#feature .fe-box:nth-child(5) h6
+{
+    background-color: rgba(153, 0, 255, 0.323);
+}
+#feature .fe-box:nth-child(6) h6
+{
+    background-color: rgba(255, 0, 255, 0.493);
+}
+#product1{
+    text-align: center;
+}
+
+#product1 .pro-container{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    flex-wrap: wrap;
+}
+#product1 .pro{
+    position: relative;
+    width: 23%;
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 1px solid rgb(63, 63, 63);
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(14, 11, 99, 0.584);
+    margin: 15px 0;
+    transition: 0.2s ease;
+}
+#product1 .pro:hover{
+    box-shadow: 20px 20px 30px rgb(51, 0, 255);
+
+}
+#product1 .pro img{
+    width: 100%;
+    border-radius: 20px;
+}
+#product1 .pro .des{
+    text-align: start;
+    padding: 10px 0;
+}
+#product1 .pro .des span{
+    color: rgb(181, 213, 38);
+    font-size: 12px;
+}
+#product1 .pro .des h5{
+    padding-top: 7px;
+    color: rgb(255, 234, 0);
+    font-size: 14px;
+}
+
+#product1 .pro .des i{
+    font-size: 12px;
+    color: rgb(255, 153, 0);
+}
+#product1 .pro .des h4{
+    padding-top: 7px;
+    font-size: 15px;
+    font-weight: 700;
+    color: rgb(255, 0, 0);
+}
+#product1 .pro .cart{
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50px;
+    background-color: rgb(255, 162, 0);
+    font-weight: bolder;
+    color: rgb(0, 0, 0);
+    border: 1px solid brown;
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+}
+
+#banner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url("Images/wow.jpg");
+    width: 100%;
+    height: 40vh;
+    background-size: cover;
+    background-position: center;
+}
+#banner h4{
+    color: rgba(93, 0, 255, 0.981);
+    font-size: 50px;
+    font-weight: 500;
+}
+#banner h2{
+    color: rgb(238, 255, 0);
+    font-size: 70px;
+    padding: 10px 0;
+}
+#banner h2 span{
+    color: rgb(194, 36, 36)
+    ;
+}
+#banner button:hover{
+    background-color: rgba(238, 6, 255, 0.588);
+    color: rgb(255, 128, 0);
+}
+#sm-banner{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#sm-banner .banner-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-image: url("Images/gaming1.jpg");
+    min-width: 580px;
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    padding: 30px;
+    border: 6px solid crimson;
+}
+#sm-banner .banner-box2{
+    background-image: url("Images/Giftcarrds.jpg");
+}
+#sm-banner .banner-box2 h4{
+    color: rgb(255, 0, 0);
+    font-size: 20px;
+    font-weight: 300;
+
+}
+
+#sm-banner .banner-box2 h2{
+    color: rgb(0, 255, 221);
+    font-size: 28px;
+    font-weight: 800;
+}
+#sm-banner .banner-box2 span{
+    color: rgb(202, 0, 91);
+    font-size: 14px;
+    font-weight: 900;
+    padding-bottom: 15px;
+}
+
+#sm-banner h4{
+    color: crimson;
+    font-size: 20px;
+    font-weight: 300;
+}
+#sm-banner h2{
+    color: rgb(0, 208, 255);
+    font-size: 28px;
+    font-weight: 800;
+}
+#sm-banner span{
+    color: rgb(255, 149, 0);
+    font-size: 14px;
+    font-weight: 500;
+    padding-bottom: 15px;
+}
+#sm-banner .banner-box:hover button{
+    background-color: rgb(122, 18, 232);
+    border: 1px solid rgb(251, 71, 0);
+}
+#banner3{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 8px;
+}
+#banner3 .banner-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-image: url("Images/sumer.png");
+    min-width: 30%;
+    height: 30vh;
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    border: 6px solid crimson;
+   margin-bottom: 20px;
+   transition: 0.2s ease;
+} 
+#banner3 h2{
+    color: rgb(214, 145, 18);
+    font-weight: 900;
+    font-size: 22px;
+}
+#banner3 h3{
+    color: rgb(206, 141, 20);
+    font-weight: 800;
+    font-size: 15px;
+}
+#banner3 .banner-box2{
+    background-image: url("Images/Game-On.jpg");
+}
+#banner3 .banner-box2 h3{
+   color: rgba(162, 60, 246, 0.685);
+}
+#banner3 .banner-box2 h2{
+    color: rgba(6, 147, 255, 0.685);
+ }
+#banner3 .banner-box3{
+    background-image: url("Images/event1.jpg");
+}
+#banner3 .banner-box:hover{
+    filter: brightness(3);
+    opacity: 0.7;
+}
+
+#newsletter{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    background-image: url(Images/b14.png);
+    background-repeat: no-repeat;
+    background-position: 20% 30%;
+    background-color: #080f19;
+}
+#newsletter h4{
+    font-size: 22px;
+    font-weight: 700;
+    color: white;
+}
+#newsletter p{
+    font-size: 14px;
+    font-weight: 600;
+    color: #818ea0;
+}
+#newsletter p span{
+    color: #e0920bd6;
+}
+#newsletter p span:hover{
+    text-decoration: underline 1.5px;
+    cursor: pointer;
+}
+
+#newsletter input{
+    height: 3.125rem;
+    padding: 0 1.25rem;
+    font-size: 14px;
+    width: 100%;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    outline: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+#newsletter button{
+    background-color: #088178;
+    color: white;
+    white-space: nowrap;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+#newsletter .form{
+    display: flex;
+    width: 40%;
+}
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+footer .col{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+footer h4{
+    color: yellow;
+    font-size: 14px;
+    padding-bottom: 20px;
+
+}
+footer p{
+    color: rgb(25, 167, 255);
+    font-size: 13px;
+    margin: 0 0 8px 0;
+    
+}
+footer a{
+    font-size: 13px;
+    text-decoration: none;
+    color: #9a9191;
+    margin-bottom: 10px;
+    
+}
+footer .follow{
+    margin-top: 20px;
+}
+footer .follow i{
+    color: #9a9191;
+    padding-right: 4px;
+    cursor: pointer;
+}
+footer .install .row img{
+    border: 2px solid rgb(25, 167, 255);
+    border-radius: 6px;
+}
+footer .install img{
+    margin: 10px 0 15px 0;
+}
+footer .follow i:hover,
+footer a:hover{
+    color: rgb(25, 167, 255);
+}
+#logo2{
+    margin-bottom: 30px;
+    height: 12vh;
+    
+}
+.icon{
+    color: red;
+}
+footer .copyright{
+    width: 100%;
+    text-align: center;
+}
+footer .col .pay img{
+   width: 300px; 
+}
+
+
+/* Start Media Query */
+
+@media (max-width:799)
